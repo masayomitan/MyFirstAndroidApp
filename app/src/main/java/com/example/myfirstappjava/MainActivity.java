@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView firstText = (TextView)findViewById(R.id.firstText);
 
-        long factorial = calculateFactorial(20);
+        long factorial = calculateFactorial(10);
         firstText.setText(String.valueOf(factorial));
     }
 
