@@ -2,6 +2,7 @@ package com.example.myfirstappjava;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,11 +11,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-      long product = 1l;
-              for(int i = 1; i <=20; i++) {
-                  product = product * i;
-              }
-              this.setTitle(String.valueOf(product));
+        TextView firstText = (TextView)findViewById(R.id.firstText);
 
+        long factorial = calculateFactorial(20);
+        firstText.setText(String.valueOf(factorial));
+    }
+
+    private long calculateFactorial(int n) {
+        long product = 1L;
+        for (int i = 1; i <= n; i++) {
+            product = product * i;
+        }
+        return product;
     }
 }
