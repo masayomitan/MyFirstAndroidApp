@@ -11,17 +11,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView firstText = (TextView)findViewById(R.id.firstText);
-
-        long factorial = calculateFactorial(10);
-        firstText.setText(String.valueOf(factorial));
     }
 
-    private long calculateFactorial(int n) {
-        long product = 1L;
-        for (int i = 1; i <= n; i++) {
-            product = product * i;
-        }
-        return product;
-    }
 }
